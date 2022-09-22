@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+// ### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+$font-Plus-Jakarta: 'Plus Jakarta Sans', sans-serif;
+
+body {
+    font-family: $font-Plus-Jakarta;
+    transition: all .3s linear;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+
+        .notification--wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+
+            .heading {
+                font-size: 1.3rem;
+            }
+
+            .notification {
+                background: $Blue;
+                padding: 4px 8px;
+                color: $White;
+                border-radius: 5px;
+                font-weight: 700;
+                font-size: .8rem;
+            }
+        }
+
+        h2 {
+            font-size: .9rem;
+            font-weight: 500;
+            transition: all .3s linear;
+
+            &:hover {
+                color: $Blue;
+            }
+        }
+
+    }
+
+
+    .notification--container {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 1.3rem;
+
+        .notification--card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+
+            img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .notification--info {
+                margin: 5px 0 0;
+
+                p {
+                    font-size: .85rem;
+                    color: $Dark-grayish-blue;
+
+                    .name {
+                        font-weight: 800;
+                        color: $Very-dark-blue;
+                    }
+
+                    .post--title {
+                        font-weight: 800;
+                        transition: all .3s linear;
+
+                        &:hover {
+                            color: $Blue;
+                        }
+                    }
+
+                    .group {
+                        font-weight: 800;
+                        transition: all .3s linear;
+
+                        &:hover {
+                            color: $Blue;
+                        }
+                    }
+
+                }
+
+                .time {
+                    font-size: .8rem;
+                    font-weight: 500;
+                    color: $Dark-grayish-blue;
+                }
+
+                .reply--container {
+                    background: transparent;
+                    border: 1px solid $Grayish-blue;
+                    padding: 8px;
+                    margin: 8px 0;
+                    font-size: .85rem;
+                    color: $Dark-grayish-blue;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    width: 80%;
+                    max-width: 650px;
+                    transition: all .3s linear;
+
+                    &:hover {
+                        border: 1px solid transparent;
+                        background: $Light-grayish-blue-1;
+                    }
+                }
+            }
+
+            .reply--img {
+                display: flex;
+                margin-left: auto;
+            }
+        }
+
+        .notification--card:nth-child(1) {
+            background: $Light-grayish-blue-1;
+        }
+
+        .notification--card:nth-child(2) {
+            background: $Light-grayish-blue-1;
+        }
+
+        .notification--card:nth-child(3) {
+            background: $Light-grayish-blue-1;
+        }
+    }
+}
+
+@media Screen and (min-width: 950px) {
+    .notification--container {
+        box-shadow: 1px 1px 20px 2px #00000015;
+        border-radius: 5px;
+    }
+}
+
+@media (hover:hover) {
+    header {
+        h2 {
+            cursor: pointer;
+        }
+    }
+
+    .post--title {
+        cursor: pointer;
+    }
+
+    .group {
+        cursor: pointer;
+    }
+
+    .reply--container {
+        cursor: pointer;
+    }
+}

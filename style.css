@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition: all 0.3s linear;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.container header .notification--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container header .notification--wrapper .heading {
+  font-size: 1.3rem;
+}
+.container header .notification--wrapper .notification {
+  background: hsl(219deg, 85%, 26%);
+  padding: 4px 8px;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.container header h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+.container header h2:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container .notification--container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1.3rem;
+}
+.container .notification--container .notification--card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.container .notification--container .notification--card img {
+  width: 45px;
+  height: 45px;
+}
+.container .notification--container .notification--card .notification--info {
+  margin: 5px 0 0;
+}
+.container .notification--container .notification--card .notification--info p {
+  font-size: 0.85rem;
+  color: hsl(219deg, 12%, 42%);
+}
+.container .notification--container .notification--card .notification--info p .name {
+  font-weight: 800;
+  color: hsl(224deg, 21%, 14%);
+}
+.container .notification--container .notification--card .notification--info p .post--title {
+  font-weight: 800;
+  transition: all 0.3s linear;
+}
+.container .notification--container .notification--card .notification--info p .post--title:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container .notification--container .notification--card .notification--info p .group {
+  font-weight: 800;
+  transition: all 0.3s linear;
+}
+.container .notification--container .notification--card .notification--info p .group:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container .notification--container .notification--card .notification--info .time {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(219deg, 12%, 42%);
+}
+.container .notification--container .notification--card .notification--info .reply--container {
+  background: transparent;
+  border: 1px solid hsl(219deg, 14%, 63%);
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 0.85rem;
+  color: hsl(219deg, 12%, 42%);
+  font-weight: 600;
+  line-height: 1.5;
+  width: 80%;
+  max-width: 650px;
+  transition: all 0.3s linear;
+}
+.container .notification--container .notification--card .notification--info .reply--container:hover {
+  border: 1px solid transparent;
+  background: hsl(211deg, 68%, 94%);
+}
+.container .notification--container .notification--card .reply--img {
+  display: flex;
+  margin-left: auto;
+}
+.container .notification--container .notification--card:nth-child(1) {
+  background: hsl(211deg, 68%, 94%);
+}
+.container .notification--container .notification--card:nth-child(2) {
+  background: hsl(211deg, 68%, 94%);
+}
+.container .notification--container .notification--card:nth-child(3) {
+  background: hsl(211deg, 68%, 94%);
+}
+
+@media Screen and (min-width: 950px) {
+  .notification--container {
+    box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.0823529412);
+    border-radius: 5px;
+  }
+}
+@media (hover: hover) {
+  header h2 {
+    cursor: pointer;
+  }
+  .post--title {
+    cursor: pointer;
+  }
+  .group {
+    cursor: pointer;
+  }
+  .reply--container {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=style.css.map */
