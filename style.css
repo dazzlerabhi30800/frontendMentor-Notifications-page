@@ -95,6 +95,19 @@ main {
 .container .notification--container .notification--card .notification--info p .group:hover {
   color: hsl(219deg, 85%, 26%);
 }
+.container .notification--container .notification--card .notification--info p .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: hsl(1deg, 90%, 64%);
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+.container .notification--container .notification--card .notification--info p .circle.readed {
+  opacity: 1;
+}
 .container .notification--container .notification--card .notification--info .time {
   font-size: 0.8rem;
   font-weight: 500;
@@ -103,14 +116,15 @@ main {
 .container .notification--container .notification--card .notification--info .reply--container {
   background: transparent;
   border: 1px solid hsl(219deg, 14%, 63%);
-  padding: 8px;
-  margin: 8px 0;
-  font-size: 0.85rem;
+  padding: 8px 1rem;
+  margin: 1rem 8px 0;
+  font-size: 0.92rem;
   color: hsl(219deg, 12%, 42%);
   font-weight: 600;
   line-height: 1.5;
+  min-width: 350px;
   width: 80%;
-  max-width: 650px;
+  max-width: 640px;
   transition: all 0.3s linear;
 }
 .container .notification--container .notification--card .notification--info .reply--container:hover {
@@ -121,14 +135,12 @@ main {
   display: flex;
   margin-left: auto;
 }
-.container .notification--container .notification--card:nth-child(1) {
+.container .notification--container .mark--as--read.read {
   background: hsl(211deg, 68%, 94%);
 }
-.container .notification--container .notification--card:nth-child(2) {
+.container .notification--container .mark--as--read:hover {
   background: hsl(211deg, 68%, 94%);
-}
-.container .notification--container .notification--card:nth-child(3) {
-  background: hsl(211deg, 68%, 94%);
+  transition: all 0.3s linear;
 }
 
 @media Screen and (min-width: 950px) {
@@ -148,6 +160,9 @@ main {
     cursor: pointer;
   }
   .reply--container {
+    cursor: pointer;
+  }
+  .mark--as--read {
     cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */

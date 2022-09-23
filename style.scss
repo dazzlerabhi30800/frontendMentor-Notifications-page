@@ -125,6 +125,22 @@ main {
                         }
                     }
 
+                    .circle {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background: $Red;
+                        border-radius: 50%;
+                        margin-left: 5px;
+                        transition: all .3s linear;
+                        opacity: 0;
+                    }
+
+                    .circle.readed {
+                        opacity: 1
+                    }
+
+
                 }
 
                 .time {
@@ -136,15 +152,17 @@ main {
                 .reply--container {
                     background: transparent;
                     border: 1px solid $Grayish-blue;
-                    padding: 8px;
-                    margin: 8px 0;
-                    font-size: .85rem;
+                    padding: 8px 1rem;
+                    margin: 1rem 8px 0;
+                    font-size: .92rem;
                     color: $Dark-grayish-blue;
                     font-weight: 600;
                     line-height: 1.5;
+                    min-width: 350px;
                     width: 80%;
-                    max-width: 650px;
+                    max-width: 640px;
                     transition: all .3s linear;
+
 
                     &:hover {
                         border: 1px solid transparent;
@@ -159,17 +177,16 @@ main {
             }
         }
 
-        .notification--card:nth-child(1) {
+        .mark--as--read.read {
             background: $Light-grayish-blue-1;
         }
 
-        .notification--card:nth-child(2) {
+        .mark--as--read:hover {
             background: $Light-grayish-blue-1;
+            transition: all .3s linear;
         }
 
-        .notification--card:nth-child(3) {
-            background: $Light-grayish-blue-1;
-        }
+
     }
 }
 
@@ -178,6 +195,8 @@ main {
         box-shadow: 1px 1px 20px 2px #00000015;
         border-radius: 5px;
     }
+
+
 }
 
 @media (hover:hover) {
@@ -196,6 +215,10 @@ main {
     }
 
     .reply--container {
+        cursor: pointer;
+    }
+
+    .mark--as--read {
         cursor: pointer;
     }
 }
