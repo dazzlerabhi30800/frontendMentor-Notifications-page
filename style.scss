@@ -177,6 +177,9 @@ main {
             }
         }
 
+        .mark--as--read {
+            transition: all .3s linear;
+        }
         .mark--as--read.read {
             background: $Light-grayish-blue-1;
         }
